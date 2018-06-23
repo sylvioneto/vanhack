@@ -38,19 +38,14 @@ body {
 			<label>Customer list in JSON</label> <a href="/skipthedishes/customers.json">click here</a>
 		</div>
 		<div>
-			<form action="/skipthedishes/customers/zip.json" method="GET">
+			<form action="/skipthedishes/customers.json" method="GET">
 				<label>Zip Code</label> 
-				<input name="zipCode" type="text"/>
-				<button type="submit" class="btn btn-primary">Get JSON</button>
-				Ex: B3W 0K1
-			</form>
-		</div>
-		<div>
-			<form action="/skipthedishes/customers/geoposition.json" method="GET">
+				<input name="zipCode" type="text"/> Ex: B3W 0K1
+				<br>
 				<label>Geo Position</label> 
-				<input name="geoPosition" type="text"/>
+				<input name="geoPosition" type="text"/> Ex: 54.36426, -120.06526
+				<br>
 				<button type="submit" class="btn btn-primary">Get JSON</button>
-				Ex: 54.36426, -120.06526
 			</form>
 		</div>
 	</div>

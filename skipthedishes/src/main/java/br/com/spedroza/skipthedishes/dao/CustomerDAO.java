@@ -23,25 +23,11 @@ public class CustomerDAO {
 		manager.persist(customer);
 	}
 
-	// query all customers in the database
+	// query customers in the database
 	public List<Customer> findAll() {
 		System.out.println("Inside CustomerDAO.findAll...");
 		System.out.println("Querying all customers... ");
 		return manager.createQuery("select c from Customer c", Customer.class).getResultList();
-	}
-
-	// query customers based in zip code
-	public List<Customer> findByZip(String zipCode) {
-		System.out.println("Inside CustomerDAO.findByZip...");
-		System.out.println("Querying customers by the zipCode: " + zipCode);
-		return manager.createQuery("select c from Customer c where c.zipCode = :zipCode", Customer.class).getResultList();
-	}
-
-	// query customers based in geoPosition
-	public List<Customer> findByGeoPosition(String geoPosition) {
-		System.out.println("Inside CustomerDAO.findByGeoPosition...");
-		System.out.println("Querying customers by the geoPosition: " + geoPosition);
-		return manager.createQuery("select c from Customer c where c.geoPosition = :geoPosition", Customer.class).getResultList();
 	}
 
 }
