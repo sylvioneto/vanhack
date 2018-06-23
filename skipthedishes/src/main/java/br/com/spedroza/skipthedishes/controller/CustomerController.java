@@ -8,7 +8,6 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.spedroza.skipthedishes.dao.CustomerDAO;
@@ -43,7 +42,7 @@ public class CustomerController {
 		System.out.println("List size before filter: "+customers.size());
 		
 		// using stream to filter by zip
-		customers = customers.stream().filter(c -> c.getZipCode().equalsIgnoreCase(zipCode)).collect(Collectors.toList());
+		customers = customers.stream().filter(c -> c.getZipCode().equalsIgnoreCase(zipCode.trim())).collect(Collectors.toList());
 		System.out.println("List size after filter: "+customers.size());
 		
 		System.out.println("Setting customer list...");
@@ -60,7 +59,7 @@ public class CustomerController {
 		System.out.println("List size before filter: "+customers.size());
 		
 		// using stream to filter by geoPosition
-		customers = customers.stream().filter(c -> c.getGeoPosition().equalsIgnoreCase(geoPosition)).collect(Collectors.toList());
+		customers = customers.stream().filter(c -> c.getGeoPosition().equalsIgnoreCase(geoPosition.trim())).collect(Collectors.toList());
 		System.out.println("List size after filter: "+customers.size());
 		
 		System.out.println("Setting customer list...");

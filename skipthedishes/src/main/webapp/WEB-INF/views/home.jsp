@@ -38,17 +38,19 @@ body {
 			<label>Customer list in JSON</label> <a href="/skipthedishes/customers.json">click here</a>
 		</div>
 		<div>
-			<form action="${s:mvcUrl('CC#findByZip').arg(0, zipCode).build()}" method="GET">
+			<form action="/skipthedishes/customers/zip.json" method="GET">
 				<label>Zip Code</label> 
 				<input name="zipCode" type="text"/>
-				<button type="submit" class="btn btn-primary">Search</button>
+				<button type="submit" class="btn btn-primary">Get JSON</button>
+				Ex: B3W 0K1
 			</form>
 		</div>
 		<div>
-			<form action="${s:mvcUrl('CC#findByGeoPosition').arg(0, geoPosition).build()}" method="GET">
+			<form action="/skipthedishes/customers/geoposition.json" method="GET">
 				<label>Geo Position</label> 
 				<input name="geoPosition" type="text"/>
-				<button type="submit" class="btn btn-primary">Search</button>
+				<button type="submit" class="btn btn-primary">Get JSON</button>
+				Ex: 54.36426, -120.06526
 			</form>
 		</div>
 	</div>
