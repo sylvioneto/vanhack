@@ -17,7 +17,7 @@ You'll find all instructions in https://github.com/sylvioneto/vanhack/blob/maste
 
 ## Running the tests
 Import the project in eclipse.
-Right click on the junit classes under and select "Run JUNIT"
+Right click on the junit classes under ""src\test\java\br\com\spedroza\skipthedishes" and select "Run JUNIT"
 
 ## Built With
 Spring (https://spring.io/projects/spring-framework) - MVC pattern and dependency injection
