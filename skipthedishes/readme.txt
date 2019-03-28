@@ -20,7 +20,7 @@ JDK 1.8
 You'll find all instructions in https://github.com/sylvioneto/vanhack/blob/master/skipthedishes/SkipTheDishes-SYLVIO.pdf
 
 ### Running the tests ###
-Import the project in eclipse.
+Import the project in IDE
 Right click on the junit classes under ""src\test\java\br\com\spedroza\skipthedishes" and select "Run JUNIT"
 
 ### Built With ###
